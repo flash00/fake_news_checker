@@ -1,0 +1,10 @@
+<h1>Articles:</h1>
+
+<ul>
+  <% @articles.each do |article|  %>
+  <li><a href='/articles/<%= article.id %>'</a></li>
+    <form action='/articles/<%= article.id %>' method='POST'>
+    <input type="submit" value="save">
+  </form>
+  <% end %>
+</ul>
